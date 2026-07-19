@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   darkMode: 'class',
   content: [
     "./index.html",
@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#800c22', // Drishti Crimson Maroon
+        primary: '#800c22',
         secondary: '#d97706',
         accent: '#1e3a8a',
       }

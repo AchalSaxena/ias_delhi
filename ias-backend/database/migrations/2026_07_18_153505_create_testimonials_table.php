@@ -1,0 +1,34 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('testimonials', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('course_id')->constrained('courses')->onDelete('cascade');
+            $table->string('student_name');
+            $table->text('review_text');
+            $table->tinyInteger('rating')->min(1)->max(5);
+            $table->string('image_url')->nullable();
+            $table->boolean('approved')->default(false);
+            $table->timestamps();
+            $table->index('approved');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('testimonials');
+    }
+};

@@ -1,0 +1,89 @@
+@import "tailwindcss";
+@config "../../tailwind.config.js";
+
+
+:root {
+  --primary: #800c22;
+  --secondary: #d97706;
+  --accent: #1e3a8a;
+}
+
+* {
+  @apply antialiased;
+}
+
+/* Global Theme Styles & Overrides */
+body {
+  background-color: #ffffff;
+  color: #1f2937;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html.dark body {
+  background-color: #0a0a0a;
+  color: #f3f4f6;
+}
+
+/* Dark mode class overrides for existing layout cards & text elements */
+html.dark .bg-white {
+  background-color: #0f1013 !important;
+}
+
+html.dark .bg-gray-50 {
+  background-color: #121316 !important;
+}
+
+html.dark .bg-gray-100 {
+  background-color: #17181c !important;
+}
+
+html.dark .text-gray-900,
+html.dark .text-gray-800 {
+  color: #f3f4f6 !important;
+}
+
+html.dark .text-gray-700 {
+  color: #e5e7eb !important;
+}
+
+html.dark .text-gray-600 {
+  color: #9ca3af !important;
+}
+
+html.dark .text-gray-500 {
+  color: #6b7280 !important;
+}
+
+html.dark .border-gray-100,
+html.dark .border-gray-200 {
+  border-color: #1e1f24 !important;
+}
+
+/* Scoped overrides for courses filter and detail pages */
+html.dark .courses-main-bg {
+  background-color: #0a0a0a !important;
+}
+
+html.dark .course-card-bg {
+  background-color: #0f1013 !important;
+  border-color: #1e1f24 !important;
+}
+
+html.dark .text-dark-only {
+  color: #ffffff !important;
+}
+
+/* Dark mode overrides for blue alerts and containers */
+html.dark .bg-blue-50 {
+  background-color: rgba(59, 130, 246, 0.08) !important;
+}
+
+html.dark .border-blue-200 {
+  border-color: rgba(59, 130, 246, 0.2) !important;
+}
+
+html.dark .text-blue-800,
+html.dark .text-blue-700 {
+  color: #93c5fd !important;
+}
+

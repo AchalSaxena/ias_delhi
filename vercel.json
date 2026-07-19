@@ -1,0 +1,9 @@
+{
+  "buildCommand": "cd ias-frontend && npm install && npm run build",
+  "outputDirectory": "ias-frontend/dist",
+  "installCommand": "cd ias-frontend && npm install",
+  "framework": "vite",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "ias-delhi",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "cd ias-frontend && npm install && npm run dev",
+    "build": "cd ias-frontend && npm install && npm run build",
+    "start": "cd ias-frontend && npm run preview"
+  }
+}
